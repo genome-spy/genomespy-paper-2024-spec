@@ -6,6 +6,13 @@ This repository contains the visualization specification for the
 Toolkit" by Lavikka, et al. (2024). In addition, this repository contains a
 small example data set to demonstrate the visualization.
 
+> [!NOTE]
+> This repository is a fork of the original repository published together with
+> the GenomeSpy paper:
+> https://github.com/HautaniemiLab/genomespy-paper-2024-spec
+> It has been updated to use newer GenomeSpy features and the modern GenomeSpy
+> visualization schema. The original specification still works.
+
 An interactive version with the full data set is available for exploration at
 https://csbi.ltdk.helsinki.fi/p/genomespy-paper-2024/. All visualization and
 data processing occur in the web browser, which receives the data as static

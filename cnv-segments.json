@@ -1,7 +1,8 @@
 {
-  "$schema": "https://unpkg.com/@genome-spy/core/dist/schema.json",
+  "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/app/dist/schema.json",
 
   "name": "cnv-segments",
+  "description": "Segmented copy-number data for the cohort. The track shows purified logR heatmaps, LOH bars, and aggregate G score and LOH score summaries derived from the same segments.",
 
   "configurableVisibility": false,
 
@@ -54,6 +55,7 @@
     {
       "title": "Copy-number variation",
       "name": "CNV",
+      "description": "Purified logR heatmap for segmented copy-number data. Amplifications are red, deletions are blue, and the aggregate summary computes G score from weighted segment coverage.",
 
       "configurableVisibility": true,
 
@@ -216,6 +218,7 @@
     {
       "title": "Loss of heterozygosity",
       "name": "LOH",
+      "description": "Translucent gray LOH bars over the copy-number track. The aggregate summary computes LOH score from weighted coverage of purified LOH values.",
 
       "configurableVisibility": true,
 

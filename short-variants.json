@@ -1,8 +1,9 @@
 {
-  "$schema": "https://unpkg.com/@genome-spy/core/dist/schema.json",
+  "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/app/dist/schema.json",
 
   "title": "Short variants",
   "name": "mutations",
+  "description": "Single- and multi-nucleotide variants shown as sample-aware points. Point size reflects VAF, color encodes functional consequence, and semantic zoom keeps the most important mutations visible at lower resolution.",
 
   "baseUrl": "decider-data/",
 

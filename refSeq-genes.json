@@ -1,7 +1,8 @@
 {
-  "$schema": "https://unpkg.com/@genome-spy/core/dist/schema.json",
+  "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/core/dist/schema.json",
 
   "name": "refseq-track",
+  "description": "RefSeq gene annotation track with exon structures, gene symbols, and strand-aware labels laid out along the genomic axis.",
 
   "title": {
     "text": "RefSeq Gene annotation",

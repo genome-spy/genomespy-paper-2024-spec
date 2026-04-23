@@ -1,4 +1,6 @@
 {
+  "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/core/dist/schema.json",
+
   "name": "decider-blacklist",
 
   "title": {
