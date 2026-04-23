@@ -2,7 +2,9 @@
   "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/core/dist/schema.json",
 
   "name": "ideogram-track",
-  "description": "Chromosome ideogram with cytoband shading and chromosome labels for the hg38 genome.",
+  "description": "Chromosome ideogram with cytoband annotations.",
+
+  "view": { "stroke": "black" },
   "title": {
     "text": "Chromosome Ideogram",
     "style": "track-title"
