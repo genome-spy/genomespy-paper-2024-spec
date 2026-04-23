@@ -3,14 +3,14 @@
 
 <head>
     <title>GenomeSpy</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@genome-spy/app@0.52.x/dist/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@genome-spy/app@0.75.x/dist/style.css" />
 </head>
 
 <body>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@genome-spy/app@0.52.x"></script>
+    <script type="module">
+      import { embed } from "https://cdn.jsdelivr.net/npm/@genome-spy/app@0.75.0/dist/index.es.js";
 
-    <script>
-        genomeSpyApp.embed(document.body, "spec.json", {});
+      await embed(document.body, "spec.json", {});
     </script>
 </body>
 
