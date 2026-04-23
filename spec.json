@@ -122,6 +122,27 @@
         "title": "Genomic data",
         "description": "Copy-number segments and short variants shown for each sample.",
 
+        "params": [
+          {
+            "name": "brush",
+            "select": {
+              "type": "interval",
+              "encodings": ["x"],
+              "zoom": "wheel[event.shiftKey]",
+              "mark": {
+                "fill": "#a0ff00",
+                "fillOpacity": 0.05,
+                "stroke": "black",
+                "strokeOpacity": 0.8,
+                "measure": "inside",
+                "shadowOpacity": 1.0,
+                "shadowColor": "white",
+                "shadowBlur": 25
+              }
+            }
+          }
+        ],
+
         "resolve": {
           "scale": { "color": "independent", "fill": "independent" }
         },
