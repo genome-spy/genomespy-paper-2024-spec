@@ -63,12 +63,16 @@
             },
 
             "attributes": {
+              "patient": {
+                "description": "Patient identifier. Most patients have multiple samples."
+              },
               "sampleTime": {
                 "type": "ordinal",
                 "scale": {
                   "domain": ["primary", "interval", "relapse"],
                   "range": ["#facf5a", "#f95959", "#455d7a"]
-                }
+                },
+                "description": "Time point of sample collection. Primary samples were collected at initial diagnosis, interval samples were collected after neoadjuvant chemotherapy, and relapse samples were collected at relapse after surgery."
               },
               "diagnosis": {
                 "type": "nominal"
@@ -103,7 +107,8 @@
                 "scale": {
                   "domain": [0, 60000],
                   "scheme": "lightorange"
-                }
+                },
+                "description": "Total number of somatic mutations identified in the sample. This is a measure of tumor mutational burden."
               },
               "breaks": {
                 "type": "quantitative",
@@ -111,7 +116,8 @@
                   "scheme": "lightorange"
                 },
                 "barScale": {},
-                "width": 20
+                "width": 20,
+                "description": "Total number of somatic copy-number breaks identified in the sample. This is a measure of genomic instability."
               }
             }
           }

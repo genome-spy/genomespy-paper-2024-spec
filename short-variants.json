@@ -30,7 +30,7 @@
         "max": 0.15,
         "step": 0.001,
         "name": "Semantic zoom fraction",
-        "description": "The portion of mutations to show at each zoom level. Only those with the highest CADD score are shown."
+        "description": "Controls how many mutation points remain visible during semantic zoom thinning. Lower values show fewer mutations; higher values show more. Mutations with the highest CADD scores are kept first."
       }
     }
   ],

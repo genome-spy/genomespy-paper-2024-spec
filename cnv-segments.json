@@ -55,7 +55,7 @@
     {
       "title": "Copy-number variation",
       "name": "CNV",
-      "description": "Purified logR heatmap for segmented copy-number data. Amplifications are red, deletions are blue, and the aggregate summary computes G score from weighted segment coverage.",
+      "description": "Purified logR heatmap for segmented copy-number data.",
 
       "configurableVisibility": true,
 
@@ -81,7 +81,8 @@
             "domain": [-2.5, 0, 2.5],
             "range": ["#0050f8", "#f6f6f6", "#ff3000"],
             "clamp": true
-          }
+          },
+          "description": "Base 2 logarithm of the copy-number ratio for the segment, purified to remove non-aberrant signals. Zero equals to sample's average ploidy, positive values indicate amplifications, and negative values indicate deletions."
         }
       },
 
