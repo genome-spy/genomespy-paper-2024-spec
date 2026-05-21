@@ -1,18 +1,36 @@
 {
-  "$schema": "https://cdn.jsdelivr.net/npm/@genome-spy/core/dist/schema.json",
+  "$schema": "https://unpkg.com/@genome-spy/core/dist/schema.json",
 
   "name": "ideogram-track",
-  "description": "Chromosome ideogram with cytoband annotations.",
-
-  "view": { "stroke": "black" },
   "title": {
     "text": "Chromosome Ideogram",
     "style": "track-title"
   },
 
+  "description": "Chromosome ideogram with cytoband annotations.",
+
+  "visible": true,
+
+  "view": {
+    "stroke": "black"
+  },
+
   "height": 24,
   "data": { "url": "external-data/cytobands.tsv" },
-  "transform": [{ "type": "filter", "expr": "!test(/_/, datum.chrom)" }],
+  "transform": [
+    { "type": "filter", "expr": "!test(/_/, datum.chrom)" },
+    {
+      "type": "regexExtract",
+      "field": "chrom",
+      "regex": "^chr(.*)$",
+      "as": "chromNumber"
+    },
+    {
+      "type": "formula",
+      "expr": "datum.chromNumber + datum.name",
+      "as": "fullName"
+    }
+  ],
   "encoding": {
     "x": {
       "chrom": "chrom",
@@ -29,6 +47,7 @@
   },
   "layer": [
     {
+      "name": "cytobands-rects",
       "title": "Cytoband",
       "mark": "rect",
       "encoding": {
@@ -58,13 +77,8 @@
             ]
           }
         },
-        "squeeze": {
-          "expr": "datum.gieStain == 'acen' ? (test(/^p/, datum.name) ? 'p' : 'q') : null",
-          "type": "nominal",
-          "scale": {
-            "domain": ["p", "q"],
-            "range": ["right", "left"]
-          }
+        "search": {
+          "field": "fullName"
         }
       }
     },
