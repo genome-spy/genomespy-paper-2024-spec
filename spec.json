@@ -49,8 +49,11 @@
           "data": { "url": "decider-data/samples.tsv" },
           "idField": "sample",
           "displayNameField": "displayName"
-        },
-        "metadataSources": [
+        }
+      },
+
+      "metadata": {
+        "sources": [
           {
             "name": "metadata",
             "description": "Static sample metadata loaded from samples.tsv.",
@@ -58,8 +61,7 @@
             "excludeColumns": ["displayName"],
             "backend": {
               "backend": "data",
-              "data": { "url": "decider-data/samples.tsv" },
-              "sampleIdField": "sample"
+              "data": { "url": "decider-data/samples.tsv" }
             },
 
             "attributes": {
