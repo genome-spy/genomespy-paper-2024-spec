@@ -3,6 +3,8 @@
 
   "name": "refseq-track",
 
+  "description": "RefSeq gene annotations from USCS. Isoforms are synthesized into a single gene annotation with the union of all exons.",
+
   "title": {
     "text": "RefSeq Gene annotation",
     "orient": "none"
@@ -142,7 +144,10 @@
           "encoding": {
             "x": { "field": "_start", "type": "locus", "axis": null },
             "x2": { "field": "_end" },
-            "search": { "field": "symbol" }
+            "search": {
+              "field": "symbol",
+              "description": "HUGO gene symbols for looking up genes."
+            }
           }
         }
       ]
@@ -191,6 +196,7 @@
         },
         {
           "name": "arrows",
+          "description": "Strand direction arrows for gene symbols. Only shown when zoomed in close enough.",
           "opacity": {
             "unitsPerPixel": [100000, 40000],
             "values": [0, 1]

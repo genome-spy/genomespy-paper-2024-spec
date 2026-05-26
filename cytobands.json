@@ -78,7 +78,8 @@
           }
         },
         "search": {
-          "field": "fullName"
+          "field": "fullName",
+          "description": "Combined chromosome number + chromosomal band. Useful for locus search, e.g. '1p36.33'."
         }
       }
     },
