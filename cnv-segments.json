@@ -232,10 +232,15 @@
         "y": {
           "field": "purifiedLoh",
           "type": "quantitative",
-          "axis": null,
           "scale": {
             "domain": [0, 1],
             "clamp": true
+          },
+          "axis": {
+            "title": "LOH",
+            "placement": "inside",
+            "titlePositioning": "range",
+            "orient": "left"
           }
         },
         "color": { "value": "black" },

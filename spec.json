@@ -126,6 +126,11 @@
         ]
       },
 
+      "sampleYAxis": {
+        "minSampleHeight": 30,
+        "mode": "top"
+      },
+
       "spec": {
         "title": "Genomic data",
         "description": "Copy-number segments and short variants shown for each sample.",
