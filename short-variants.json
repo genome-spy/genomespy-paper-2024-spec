@@ -43,7 +43,12 @@
   },
 
   "data": {
-    "url": ["patient1.tsv", "patient2.tsv", "patient3.tsv"],
+    "url": {
+      "template": "{patient}.tsv",
+      "values": { "expr": "visibleSampleMetadata.patient" },
+      "field": "patient",
+      "attach": false
+    },
     "format": {
       "type": "tsv",
       "parse": {
